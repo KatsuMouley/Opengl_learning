@@ -6,21 +6,18 @@
 			"label": "SDL2",
 			"command": "C:\\Program Files\\mingw64\\bin\\g++.exe",
 			"args": [
+				"-fdiagnostics-color=always",
 				"-g",
 				"${file}",
 				"-o",
-				"${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
 				"-IC:/SDL2/SDL2-2.30.2/x86_64-w64-mingw32/include",
 				"-LC:/SDL2/SDL2-2.30.2/x86_64-w64-mingw32/lib",
-				"-I${workspaceFolder}\\include",
-				"-L${workspaceFolder}\\lib",
-				"${workspaceFolder}\\src\\glad.c",
 				"-lmingw32",
 				"-lSDL2main",
 				"-lSDL2",
-				"-mwindows",
-				"-lglfw3dll"
-			   ],
+				"-mwindows"
+			],
 			"options": {
 				"cwd": "${fileDirname}"
 			},
