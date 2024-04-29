@@ -20,7 +20,7 @@
 				"-lSDL2",
 				"-mwindows",
 				"-lglfw3dll"
-			   ],
+			],
 			"options": {
 				"cwd": "${fileDirname}"
 			},
