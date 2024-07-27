@@ -20,7 +20,7 @@ int main()
     //In this following line, we're telling GLFW that we are using the CORE profile, which inplies that we only have the modern functions
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     // In here, we're creating a Window Object with width and height, and a name
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Metal Lab Engine", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Window lesson", NULL, NULL);
     //check if the window failed to create
     if(window == NULL){
         std::cout << "Failed to create GLFW window" << std::endl;
