@@ -104,16 +104,22 @@ int main()
     GLfloat vertices[] =
     {
         // X, Y, Z
-        -0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f,
-        0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f,
-        0.0f, 0.5f * float(sqrt(3)) * 2 / 3, 0.0f
+		0.5f, 0.5f, 0.0f, // Lower left corner
+		0.5f, -0.5f, 0.0f, // Lower right corner
+		-0.5f, -0.5f, 0.0f, // Upper corner
+		-0.5f, 0.5f, 0.0f, // Inner left
+    };
+    GLuint indices[]={
+        0, 1, 3,
+        1, 2, 3
     };
 
 
 	// Create reference containers for the Vartex Array Object and the Vertex Buffer Object
-    GLuint VAO, VBO;
+    GLuint VAO, VBO, EBO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
+    glGenBuffers(1, &EBO);
 
 
 	// Make the VAO the current Vertex Array Object by binding it
@@ -126,6 +132,8 @@ int main()
 	// Introduce the vertices into the VBO
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
 	// Configure the Vertex Attribute so that OpenGL knows how to read the VBO
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
@@ -137,6 +145,7 @@ int main()
 	// Bind both the VBO and VAO to 0 so that we don't accidentally modify the VAO and VBO we created
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
     //Main while loop
     while (!glfwWindowShouldClose(window)){
@@ -149,17 +158,9 @@ int main()
 		// Bind the VAO so OpenGL knows to use it
         glBindVertexArray(VAO);
 		// Draw the triangle using the GL_TRIANGLES primitive
-        glDrawArrays(GL_TRIANGLES, 0, 3);
-        // The output of the vertex shader stage is optionally passed to the geometry shader.
-        // The geometry shader takes as input a collection of vertices that form a primitive and has the ability to generate other shapes by emitting new vertices to form new (or other) primitive(s).
-        // In this example case, it generates a second triangle out of the given shape.
-        
-        // The primitive assembly stage takes as input all the vertices (or vertex if GL_POINTS is chosen) from the vertex (or geometry) 
-        // shader that form one or more primitives and assembles all the point(s) in the primitive shape given; in this case two triangles.
-        
-        // In order for OpenGL to know what to make of your collection of coordinates and color values OpenGL requires you to hint what kind of render types you want to form with the data. 
-        // Do we want the data rendered as a collection of points, a collection of triangles or perhaps just one long line? Those hints are called primitives and are given to OpenGL while calling any of the drawing commands. 
-        // Some of these hints are GL_POINTS, GL_TRIANGLES and GL_LINE_STRIP.
+        // Now we're using GlDrawElements
+        glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
+
 
 		// Swap the back buffer with the front buffer
         glfwSwapBuffers(window);
@@ -172,6 +173,8 @@ int main()
 	// Delete all the objects we've created
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
+    glDeleteBuffers(1, &EBO);
+
     glDeleteProgram(shaderProgram);
     
 	// Delete window before ending the program
