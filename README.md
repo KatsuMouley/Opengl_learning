@@ -10,4 +10,6 @@ SDL2 Setup: https://medium.com/estado-pensante/configurando-mingw-e-sdl2-no-visu
 
 Opengl Setup: https://medium.com/estado-pensante/configurando-opengl-no-visual-studio-code-63059108e0e2
 
+Opengl Learn: https://learnopengl.com/
+
 translated Step by Step guide and some problems that you might see:
