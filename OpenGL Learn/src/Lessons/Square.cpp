@@ -25,7 +25,6 @@ const char* fragmentShaderSource = "#version 330 core\n"
 //Triangle Lesson
 
 //Vertex Shader
-
 //Shape Assembly
 //Geometry Shader
 //Tests and Blending
@@ -160,7 +159,6 @@ int main()
 		// Draw the triangle using the GL_TRIANGLES primitive
         // Now we're using GlDrawElements
         glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
-
 
 		// Swap the back buffer with the front buffer
         glfwSwapBuffers(window);
