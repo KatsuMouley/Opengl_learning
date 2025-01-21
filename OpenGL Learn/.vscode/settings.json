@@ -1,11 +1,11 @@
 {
-  "C_Cpp_Runner.cCompilerPath": "C:/Program Files/mingw64/bin/gcc.exe",
-  "C_Cpp_Runner.cppCompilerPath": "C:/Program Files/mingw64/bin/g++.exe",
-  "C_Cpp_Runner.debuggerPath": "C:/Program Files/mingw64/bin/gdb.exe",
-  "C_Cpp_Runner.cStandard": "c17",
-  "C_Cpp_Runner.cppStandard": "c++17",
-  "C_Cpp_Runner.msvcBatchPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Auxiliary/Build/vcvarsall.bat",
-  "C_Cpp_Runner.useMsvc": false,
+  "C_Cpp_Runner.cCompilerPath": "C:/Program Files/mingw64/bin/gcc.exe", // Já está no c_cpp_properties.json
+  "C_Cpp_Runner.cppCompilerPath": "C:/Program Files/mingw64/bin/g++.exe", // Já está no c_cpp_properties.json
+  "C_Cpp_Runner.debuggerPath": "C:/Program Files/mingw64/bin/gdb.exe", // Não é necessário se você já estiver configurando um debugger no seu projeto.
+  "C_Cpp_Runner.cStandard": "c17", // Já está no c_cpp_properties.json
+  "C_Cpp_Runner.cppStandard": "c++17", // Já está no c_cpp_properties.json
+  "C_Cpp_Runner.msvcBatchPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Auxiliary/Build/vcvarsall.bat", // Não é necessário se você não está utilizando MSVC
+  "C_Cpp_Runner.useMsvc": false, // Não é necessário se você não está utilizando MSVC
   "C_Cpp_Runner.warnings": [
     "-Wall",
     "-Wextra",
@@ -33,10 +33,10 @@
     "/w44265",
     "/w14928"
   ],
-  "C_Cpp_Runner.enableWarnings": true,
-  "C_Cpp_Runner.warningsAsError": false,
-  "C_Cpp_Runner.compilerArgs": [],
-  "C_Cpp_Runner.linkerArgs": [],
+  "C_Cpp_Runner.enableWarnings": true, // Já está configurado no `settings.json`
+  "C_Cpp_Runner.warningsAsError": false, // Já configurado no `settings.json`
+  "C_Cpp_Runner.compilerArgs": [], // Isso é configurado no `tasks.json`, se necessário
+  "C_Cpp_Runner.linkerArgs": [], // Isso também pode ser configurado no `tasks.json`
   "C_Cpp_Runner.includePaths": [
     "${workspaceFolder}/**",
     "C:\\SDL2\\SDL2-2.30.2\\x86_64-w64-mingw32\\include"
@@ -53,14 +53,12 @@
     "**/.vscode",
     "**/.vscode/**"
   ],
-  "C_Cpp_Runner.useAddressSanitizer": false,
-  "C_Cpp_Runner.useUndefinedSanitizer": false,
-  "C_Cpp_Runner.useLeakSanitizer": false,
-  "C_Cpp_Runner.showCompilationTime": false,
-  "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false,
-  "C_Cpp.errorSquiggles": "enabled",
-  "files.associations": {
-    "iostream": "cpp"
-  }
+  "C_Cpp_Runner.useAddressSanitizer": false, // Se não estiver usando, pode ser removido
+  "C_Cpp_Runner.useUndefinedSanitizer": false, // Se não estiver usando, pode ser removido
+  "C_Cpp_Runner.useLeakSanitizer": false, // Se não estiver usando, pode ser removido
+  "C_Cpp_Runner.showCompilationTime": false, // Não precisa se você não deseja isso explicitamente
+  "C_Cpp_Runner.useLinkTimeOptimization": false, // Se não estiver usando, pode ser removido
+  "C_Cpp_Runner.msvcSecureNoWarnings": false, // Não aplicável se não estiver usando MSVC
+  "C_Cpp.errorSquiggles": "enabled", // Pode ser mantido
+  "files.associations": { "iostream": "cpp" } // Pode ser mantido se você precisa associar arquivos `.h` ou outros com `.cpp`
 }

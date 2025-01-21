@@ -20,7 +20,7 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "SDL2"
+      "preLaunchTask": "class1_window"
     },
     {
       "name": "Triangle",
@@ -41,28 +41,7 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "SDL2"
-    },
-    {
-      "name": "Triangle2",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${workspaceFolder}\\build\\Triangle2.exe",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
-      "setupCommands": [
-        {
-          "description": "Habilitar a reformatação automática para gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
-      "preLaunchTask": "SDL2"
+      "preLaunchTask": "class2_triangle"
     },
     {
       "name": "IndexBuffer",
@@ -83,7 +62,7 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "SDL2"
+      "preLaunchTask": "class3_IndexBuffer1"
     },
     {
       "name": "Square",
@@ -104,7 +83,28 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "SDL2"
+      "preLaunchTask": "class3_IndexBuffer2"
+    },
+    {
+      "name": "OrganizedFiles",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}\\build\\OrganizedFiles.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
+      "setupCommands": [
+        {
+          "description": "Habilitar a reformatação automática para gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "class4_organized"
     },
     {
       "name": "C/C++ Runner: Debug Session",

@@ -3,17 +3,18 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "SDL2",
+			"label": "class1_window",
 			"command": "C:\\Program Files\\mingw64\\bin\\g++.exe",
-			"args": [
+			"args": [ 
 				"-g",
-				"${file}",
+				"${workspaceFolder}/src/Lessons/class1/Window.cpp",
 				"-o",
 				"${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
 				"-IC:/SDL2/SDL2-2.30.2/x86_64-w64-mingw32/include",
 				"-LC:/SDL2/SDL2-2.30.2/x86_64-w64-mingw32/lib",
 				"-I${workspaceFolder}\\include",
 				"-L${workspaceFolder}\\lib",
+				"-I${workspaceFolder}/HeaderFiles",
 				"${workspaceFolder}\\src\\glad.c",
 				"-lmingw32",
 				"-lSDL2main",
@@ -32,6 +33,158 @@
 				"isDefault": true
 			},
 			"detail": "compiler: C:\\Program Files\\mingw64\\bin\\g++.exe"
-		}
+		},		
+		{
+			"type": "cppbuild",
+			"label": "class2_triangle",
+			"command": "C:\\Program Files\\mingw64\\bin\\g++.exe",
+			"args": [ 
+				"-g",
+				"${workspaceFolder}/src/Lessons/class2/Triangle.cpp",
+				"-o",
+				"${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
+				"-IC:/SDL2/SDL2-2.30.2/x86_64-w64-mingw32/include",
+				"-LC:/SDL2/SDL2-2.30.2/x86_64-w64-mingw32/lib",
+				"-I${workspaceFolder}\\include",
+				"-L${workspaceFolder}\\lib",
+				"-I${workspaceFolder}/HeaderFiles",
+				"${workspaceFolder}\\src\\glad.c",
+				"-lmingw32",
+				"-lSDL2main",
+				"-lSDL2",
+				"-mwindows",
+				"-lglfw3dll"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\Program Files\\mingw64\\bin\\g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "class3_IndexBuffer1",
+			"command": "C:\\Program Files\\mingw64\\bin\\g++.exe",
+			"args": [ 
+				"-g",
+				"${workspaceFolder}/src/Lessons/class3/Triangle2.cpp",
+				"-o",
+				"${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
+				"-IC:/SDL2/SDL2-2.30.2/x86_64-w64-mingw32/include",
+				"-LC:/SDL2/SDL2-2.30.2/x86_64-w64-mingw32/lib",
+				"-I${workspaceFolder}\\include",
+				"-L${workspaceFolder}\\lib",
+				"-I${workspaceFolder}/HeaderFiles",
+				"${workspaceFolder}\\src\\glad.c",
+				"-lmingw32",
+				"-lSDL2main",
+				"-lSDL2",
+				"-mwindows",
+				"-lglfw3dll"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\Program Files\\mingw64\\bin\\g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "class3_IndexBuffer2",
+			"command": "C:\\Program Files\\mingw64\\bin\\g++.exe",
+			"args": [ 
+				"-g",
+				"${workspaceFolder}/src/Lessons/class3/Square.cpp",
+				"-o",
+				"${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
+				"-IC:/SDL2/SDL2-2.30.2/x86_64-w64-mingw32/include",
+				"-LC:/SDL2/SDL2-2.30.2/x86_64-w64-mingw32/lib",
+				"-I${workspaceFolder}\\include",
+				"-L${workspaceFolder}\\lib",
+				"-I${workspaceFolder}/HeaderFiles",
+				"${workspaceFolder}\\src\\glad.c",
+				"-lmingw32",
+				"-lSDL2main",
+				"-lSDL2",
+				"-mwindows",
+				"-lglfw3dll"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\Program Files\\mingw64\\bin\\g++.exe"
+		},
+		{
+			"label": "class4_organized",
+			"type": "cppbuild",
+			"command": "C:/Program Files/mingw64/bin/g++.exe",
+			"args": [
+			  "-g",
+			  "${workspaceFolder}/src/Lessons/class4/OrganizedFiles.cpp",
+			  "${workspaceFolder}/src/Lessons/class4/ShaderClass.cpp",
+			  "${workspaceFolder}/src/Lessons/class4/VAO.cpp",
+			  "${workspaceFolder}/src/Lessons/class4/VBO.cpp",
+			  "${workspaceFolder}/src/Lessons/class4/EBO.cpp",
+			  "${workspaceFolder}/src/glad.c",
+			  "-o",
+			  "${workspaceFolder}/build/OrganizedFiles.exe",
+			  "-IC:/SDL2/SDL2-2.30.2/x86_64-w64-mingw32/include",
+			  "-LC:/SDL2/SDL2-2.30.2/x86_64-w64-mingw32/lib",
+			  "-I${workspaceFolder}/include",
+			  "-L${workspaceFolder}/lib",
+			  "-I${workspaceFolder}/HeaderFiles",
+			  "-lmingw32",
+			  "-lSDL2main",
+			  "-lSDL2",
+			  "-mwindows",
+			  "-lglfw3dll"
+			],
+			"problemMatcher": [
+			  "$gcc"
+			],
+			"group": {
+			  "kind": "build",
+			  "isDefault": true
+			},
+			"detail": "compiler: C:/Program Files/mingw64/bin/g++.exe"
+		  },
+		  {
+			"label": "copyShaders",
+			"type": "shell",
+			"command": "cp",
+			"args": [
+			  "${workspaceFolder}/ResourceFiles/Shaders/default.vert",
+			  
+			  "${workspaceFolder}/build/default.vert"
+			]
+		  },
+		  {
+			"label": "copyShadersFrag",
+			"type": "shell",
+			"command": "cp",
+			"args": [
+			  "${workspaceFolder}/Resources/Shaders/default.frag",
+			  "${workspaceFolder}/build/default.frag"
+			]
+		  }
 	]
 }

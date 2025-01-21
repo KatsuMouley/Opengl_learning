@@ -1,10 +1,10 @@
 {
   "configurations": [
     {
-      "name": "windows-gcc-x64",
-      "includePath": [
-        "${workspaceFolder}/**",
-        "C:\\SDL2\\SDL2-2.30.2\\x86_64-w64-mingw32\\include"
+      "name": "windows-gcc-x64","includePath": [
+      "${workspaceFolder}/**",
+      "${workspaceFolder}/HeaderFiles",
+      "C:\\SDL2\\SDL2-2.30.2\\x86_64-w64-mingw32\\include"
       ],
       "defines": [
         "_DEBUG",
